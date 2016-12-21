@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransaksiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WebService.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransaksiService_FetchAllTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_FetchAllTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_InsertNewTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_InsertNewTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNewTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_UpdateTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_UpdateTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_DeleteTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_DeleteTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_FetchKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchKategori" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_FetchKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchKategoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_FetchAllKategori_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllKategori" />
+  </wsdl:message>
+  <wsdl:message name="ITransaksiService_FetchAllKategori_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAllKategoriResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransaksiService">
+    <wsdl:operation name="FetchAllTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/FetchAllTransaksi" message="tns:ITransaksiService_FetchAllTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/FetchAllTransaksiResponse" message="tns:ITransaksiService_FetchAllTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/InsertNewTransaksi" message="tns:ITransaksiService_InsertNewTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/InsertNewTransaksiResponse" message="tns:ITransaksiService_InsertNewTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/UpdateTransaksi" message="tns:ITransaksiService_UpdateTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/UpdateTransaksiResponse" message="tns:ITransaksiService_UpdateTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/DeleteTransaksi" message="tns:ITransaksiService_DeleteTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/DeleteTransaksiResponse" message="tns:ITransaksiService_DeleteTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/FetchKategori" message="tns:ITransaksiService_FetchKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/FetchKategoriResponse" message="tns:ITransaksiService_FetchKategori_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllKategori">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransaksiService/FetchAllKategori" message="tns:ITransaksiService_FetchAllKategori_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransaksiService/FetchAllKategoriResponse" message="tns:ITransaksiService_FetchAllKategori_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITransaksiService" type="tns:ITransaksiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchAllTransaksi">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/FetchAllTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewTransaksi">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/InsertNewTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaksi">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/UpdateTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTransaksi">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/DeleteTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchKategori">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/FetchKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAllKategori">
+      <soap:operation soapAction="http://tempuri.org/ITransaksiService/FetchAllKategori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransaksiService">
+    <wsdl:port name="BasicHttpBinding_ITransaksiService" binding="tns:BasicHttpBinding_ITransaksiService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebService/TransaksiService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
